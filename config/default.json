@@ -1,0 +1,147 @@
+{
+  "server": {"host": "127.0.0.1", "port": 8765},
+
+  "resources": {
+    "torch_threads": 4,
+    "max_process_ram_mb": 3500,
+    "min_free_disk_mb": 1500,
+    "lower_priority": true
+  },
+
+  "lm": {
+    "vocab_size": 1024,
+    "block_size": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 192,
+    "dropout": 0.1,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "weight_decay": 0.05,
+    "grad_clip": 1.0,
+    "warmup_steps": 100,
+    "max_steps": 3000,
+    "eval_every": 250,
+    "checkpoint_every": 250,
+    "max_minutes": 60
+  },
+
+  "learning": {
+    "finetune_steps": 400,
+    "finetune_lr": 0.0003,
+    "replay_fraction": 0.5,
+    "anchor_l2": 0.01,
+    "approved_folders": [],
+    "max_file_mb": 5,
+    "max_regression_pct": 3.0,
+    "min_improvement_pct": 0.5,
+    "weak_loss_threshold": 0.15,
+    "negative_feedback_trigger": 3,
+    "learn_from_prompts": true,
+    "prompts_need_review": false
+  },
+
+  "internet": {
+    "learn_from_web": false,
+    "search_in_chat": false,
+    "allowed_sites": ["wikipedia.org", "wolnelektury.pl"],
+    "web_sources": [],
+    "wikipedia_language": "pl",
+    "max_paragraphs_per_page": 200,
+    "refetch_days": 7
+  },
+
+  "assistant": {
+    "enabled": true,
+    "backend": "builtin",
+    "chat_model": "bielik-1.5b",
+    "code_model": "qwen-coder-3b",
+    "max_answer_tokens": 1024,
+    "ollama_url": "http://127.0.0.1:11434",
+    "auto_code_model": true,
+    "default_engine": "assistant",
+    "temperature": 0.4,
+    "context_tokens": 4096,
+    "history_turns": 6,
+    "max_file_chars": 12000,
+    "max_upload_mb": 10,
+    "timeout_seconds": 600,
+    "keep_alive": "5m",
+    "extra_instructions": ""
+  },
+
+  "agent": {
+    "default_model": "1.2",
+    "auto_run": false,
+    "max_attempts": 3,
+    "render_after_run": true,
+    "render_size": 480,
+    "vision_model": "",
+    "look_at_result": true,
+    "knowledge_chars": 3500,
+    "run_timeout_s": 120,
+    "approval_timeout_s": 900
+  },
+
+  "video": {
+    "whisper_model": "small",
+    "language": "pl",
+    "frame_every_seconds": 30,
+    "max_frames": 12,
+    "describe_frames": false,
+    "max_upload_mb": 2000
+  },
+
+  "auth": {
+    "enabled": false,
+    "google_client_id": "",
+    "google_client_secret": "",
+    "allowed_emails": [],
+    "redirect_uri": "http://127.0.0.1:8765/auth/callback",
+    "session_hours": 168
+  },
+
+  "schedule": {
+    "enabled": false,
+    "interval_minutes": 180,
+    "allowed_hours": "0-24",
+    "max_cpu_percent_to_start": 60
+  },
+
+  "ui": {
+    "language": "pl"
+  },
+
+  "persona": {
+    "name": "NEXORA",
+    "style": "balanced",
+    "max_sentences": 0,
+    "greeting": "",
+    "context": "",
+    "blocked_words": []
+  },
+
+  "generation": {
+    "max_new_tokens": 120,
+    "temperature": 0.8,
+    "top_k": 40,
+    "top_p": 0.95,
+    "repetition_penalty": 1.1
+  },
+
+  "image": {
+    "resolution": 32,
+    "base_channels": 32,
+    "channel_mults": [1, 2, 2],
+    "text_dim": 128,
+    "timesteps": 400,
+    "batch_size": 32,
+    "learning_rate": 0.0003,
+    "max_steps": 6000,
+    "max_minutes": 45,
+    "checkpoint_every": 500,
+    "sample_steps": 50,
+    "guidance_scale": 3.0,
+    "caption_dropout": 0.1
+  }
+}

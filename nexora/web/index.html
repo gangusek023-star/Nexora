@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXORA AI</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="shell">
+  <nav class="side" aria-label="Sections">
+    <div class="brand"><span class="mark" aria-hidden="true"></span>NEXORA</div>
+    <div class="langpick"><select id="langSel" aria-label="Language"></select></div>
+    <a href="#chat" data-page="chat">Chat</a>
+    <a href="#images" data-page="images">Images</a>
+    <a href="#persona" data-page="persona">Personality</a>
+    <span class="navgroup">Learning</span>
+    <a href="#training" data-page="training">Training</a>
+    <a href="#learning" data-page="learning">Learning goals</a>
+    <a href="#candidates" data-page="candidates">Approvals <b id="pendingBadge" hidden></b></a>
+    <a href="#models" data-page="models">Evaluation &amp; versions</a>
+    <span class="navgroup">Knowledge</span>
+    <a href="#memory" data-page="memory">Memory</a>
+    <a href="#datasets" data-page="datasets">Datasets</a>
+    <a href="#knowledge" data-page="knowledge">Knowledge (Nexo 1.2)</a>
+    <span class="navgroup">System</span>
+    <a href="#llm" data-page="llm">AI models</a>
+    <a href="#connections" data-page="connections">Connections</a>
+    <a href="#hardware" data-page="hardware">Hardware</a>
+    <a href="#settings" data-page="settings">Settings</a>
+    <a href="#audit" data-page="audit">Audit log</a>
+    <div class="legend" aria-label="Colour legend">
+      <div><i class="dot mem"></i>Memory: stored, looked up</div>
+      <div><i class="dot data"></i>Dataset: waiting to train</div>
+      <div><i class="dot wts"></i>Weights: learned by training</div>
+    </div>
+  </nav>
+  <main id="main">
+    <div id="statusbar" class="statusbar" role="status"></div>
+    <section id="page"></section>
+  </main>
+</div>
+<div id="toast" role="alert" hidden></div>
+<script src="/static/i18n.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

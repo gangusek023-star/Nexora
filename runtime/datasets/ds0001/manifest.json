@@ -1,0 +1,11 @@
+{
+  "id": "ds0001",
+  "parent": null,
+  "n_docs": 50,
+  "n_tokens": 411219,
+  "sources": [
+    "base corpus"
+  ],
+  "note": "base corpus (training split)",
+  "created": 1793283266.1393342
+}

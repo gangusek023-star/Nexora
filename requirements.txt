@@ -1,0 +1,10 @@
+# NEXORA AI runtime dependencies (CPU only).
+# setup.ps1 installs torch separately from the CPU-only PyTorch index to save disk space.
+torch>=2.2
+numpy>=1.26
+pillow>=10.0
+fastapi>=0.110
+uvicorn>=0.29
+psutil>=5.9
+python-multipart>=0.0.9
+pypdf>=4.0

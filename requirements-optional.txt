@@ -1,0 +1,2 @@
+# Optional extras (setup_assistant.ps1 offers to install them)
+faster-whisper>=1.0    # learning from videos: speech -> text on the CPU (includes PyAV for frames)
